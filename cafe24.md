@@ -76,27 +76,13 @@
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=donostore.com');</script>
 ```
 
-### 주문 상세 내역
-
-마이쇼핑(myshop) > 나의 주문내역 (order) > 주문상세내역 (detail.html)
-
-```html
-<!-- cre.ma / PC 주문 리뷰 작성 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<strong><a href="/board/product/write.html{$param_postscript}" class="crema-new-review-link" data-cafe24-product-link="{$param_postscript}">구매후기</a></strong>
-
-<!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=donostore.com');</script>
-```
-
-구매후기가 "첫번째 주문"과 "두번째 이후 주문" 두 군데 있으니 모두 반영해야합니다.
-
 ### 주문 내역
 
-마이쇼핑(myshop) > 나의 주문내역 (order) > 주문상세내역 (list.html)
+마이쇼핑(myshop) > 나의 주문내역 (order) > 주문내역 (list.html)
 
 ```html
 <!-- cre.ma / PC 주문 리뷰 작성 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<a href="/board/product/write.html{$param_postscript}" class="{$postscript_display|display} crema-new-review-link" data-cafe24-product-link="{$param_postscript}"><img src="http://img.echosting.cafe24.com/design/skin/default/myshop/btn_order_comment2.gif" alt="구매후기" /></a>
+ crema-new-review-link" data-cafe24-product-link="{$param_postscript}"
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=donostore.com');</script>
@@ -156,18 +142,11 @@
 ```html
 <!-- cre.ma / Mobile 상품 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <style>#prdReview .nodata {display: none;}</style>
-<div class="crema-product-reviews-link" data-product-code="{$product_no}">상품후기<span class="crema-product-reviews-count" data-product-code="{$product_no}">0</span></div>
+<div class="crema-product-reviews" data-product-code="{$product_no}"></div>
 <!-- data-hide-if-zero="1"을 추가시 리뷰개수가 0일 경우 숨김처리 -->
 ```
 
-or
-
 ```html
-<!-- cre.ma / Mobile 상품 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<p class="mRreview"><a href="/board/product/list.html?board_no=4&link_product_no={$product_no}" class="crema-product-reviews-link crema-product-reviews-count" data-product-code="{$product_no}" data-format="구매후기 ({{{count}}}건)">구매후기 ({$review_count}건)</a></p>
-```
-
-``` html
 <!-- cre.ma / 팝업을 띄우는 코드 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <div class="crema-popup"></div>
 
@@ -199,7 +178,7 @@ or
 </div>
 
 <!-- cre.ma / Mobile 주문 리뷰 작성 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<strong><a href="/board/product/write.html{$param_postscript}" class="crema-new-review-link" data-cafe24-product-link="{$param_postscript}" data-review-source="mobile_my_orders">구매후기</a></strong>
+ crema-new-review-link" data-cafe24-product-link="{$param_postscript}" data-review-source="mobile_my_orders"
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=donostore.com');</script>
