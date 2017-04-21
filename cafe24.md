@@ -2,9 +2,22 @@
 
 ## PC
 
+### 수정하는 파일
+
+- 모든 페이지에서 공통적으로 참조하는 헤더 파일
+- 메인 페이지
+- 리뷰 게시판
+- 상품 상세 페이지
+- 마이페이지 > 내 게시글 관리
+- 주문목록 페이지
+
+PC 버전에서는 이렇게 6개 파일을 수정한다고 보시면 됩니다.
+
 ### 로그인
 
-레이아웃 (layout) > 기본 레이아웃 (basic) > 메인 레이아웃 (main.html 또는 header.html 또는 다른 경우도 있음. `@import`를 통해 공통으로 호출되는 파일을 찾으면 됨) > `module=Layout_stateLogon` 내부
+간편리뷰 기능을 제공하기 위해선 우선 로그인한 회원의 정보를 알아야 합니다.
+그 정보를 가져오기 위해서 아래의 코드를 삽입합니다. {$id}, {$name}은 카페24에서 사용하는 가상태그이며 이걸로 출력한 회원정보를 #crema-login-username과 #crema-login-name에 담아서 그걸 자바스크립트에서 파싱하고, 활용합니다.
+로그인 정보 소스가 들어가는 파일은 딱 정해져있지 않고, 찾아가는 과정이 필요합니다. 모든 페이지에서 공통적으로 참조하는 헤더 파일을 찾아야 합니다. 카페24의 기본 디자인에서는 `/layout/basic/main.html`과 `/layout/basic/layout.html`
 
 ```html
 <!-- cre.ma / 로그인 회원 정보 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
@@ -13,6 +26,11 @@
   <i id="crema-login-name" style="display:none;">{$name}</i>
 </div>
 ```
+
+위에서 module이라는 Attribute는 카페24에서 사용하는 템플릿 코드입니다.
+특정 태그에 module이라는 Attribute를 지정해주면 해당 태그 자기자신을 포함해서 내부에 있는 Child 태그들이 Cafe24 가상태그를 사용할 수 있습니다.
+위의 소스에서 module="Layout_stateLogon"가 의미하는 바는, "핑몰에서 로그인"
+
 
 ### 메인
 
@@ -23,7 +41,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 ### 리뷰 목록
@@ -40,7 +58,7 @@
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=camelbrown.com');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=iniwish.co.kr');
 </script>
 ```
 
@@ -59,7 +77,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 이전 리뷰에 `crema-hide` class 추가
@@ -73,7 +91,7 @@
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 ### 주문 내역
@@ -85,7 +103,7 @@
  crema-new-review-link" data-cafe24-product-link="{$param_postscript}"
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 ## Mobile
@@ -111,7 +129,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 
@@ -129,7 +147,7 @@
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=camelbrown.com');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=iniwish.co.kr');
 </script>
 ```
 
@@ -151,7 +169,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 ### 내 게시글
@@ -163,7 +181,7 @@
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 ### 주문 상세 내역
@@ -181,7 +199,7 @@
  crema-new-review-link" data-cafe24-product-link="{$param_postscript}" data-review-source="mobile_my_orders"
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=camelbrown.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=iniwish.co.kr');</script>
 ```
 
 구매후기가 "첫번째 주문"과 "두번째 이후 주문" 두 군데 있으니 모두 반영해야합니다.
