@@ -23,7 +23,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 ### 리뷰 목록
@@ -40,7 +40,7 @@
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');
 </script>
 ```
 
@@ -59,7 +59,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 이전 리뷰에 `crema-hide` class 추가
@@ -73,7 +73,7 @@
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 ### 주문 상세 내역
@@ -85,7 +85,7 @@
 <strong><a href="/board/product/write.html{$param_postscript}" class="crema-new-review-link" data-cafe24-product-link="{$param_postscript}">구매후기</a></strong>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 구매후기가 "첫번째 주문"과 "두번째 이후 주문" 두 군데 있으니 모두 반영해야합니다.
@@ -99,7 +99,7 @@
 <a href="/board/product/write.html{$param_postscript}" class="{$postscript_display|display} crema-new-review-link" data-cafe24-product-link="{$param_postscript}"><img src="http://img.echosting.cafe24.com/design/skin/default/myshop/btn_order_comment2.gif" alt="구매후기" /></a>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 ## Mobile
@@ -125,7 +125,7 @@
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 
@@ -143,7 +143,7 @@
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=bullang.jp');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=earlypicker.jp');
 </script>
 ```
 
@@ -172,7 +172,7 @@ or
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 ### 내 게시글
@@ -184,7 +184,7 @@ or
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 ### 주문 상세 내역
@@ -202,7 +202,7 @@ or
 <strong><a href="/board/product/write.html{$param_postscript}" class="crema-new-review-link" data-cafe24-product-link="{$param_postscript}" data-review-source="mobile_my_orders">구매후기</a></strong>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=bullang.jp');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=earlypicker.jp');</script>
 ```
 
 구매후기가 "첫번째 주문"과 "두번째 이후 주문" 두 군데 있으니 모두 반영해야합니다.
