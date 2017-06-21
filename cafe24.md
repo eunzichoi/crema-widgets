@@ -74,7 +74,9 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <!-- cre.ma / 상품 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <style>#prdReview .nodata {display: none;}</style>
 <div class="crema-product-reviews" data-product-code="{$product_no}"></div>
+```
 
+```html
 <!-- cre.ma / 팝업을 띄우는 코드 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <div class="crema-popup"></div>
 
@@ -101,9 +103,10 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 마이쇼핑(myshop) > 나의 주문내역 (order) > 주문내역 (list.html)
 
 ```html
-<!-- cre.ma / PC 주문 리뷰 작성 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
  crema-new-review-link" data-cafe24-product-link="{$param_postscript}"
+```
 
+```html
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=grafen.co.kr');</script>
 ```
@@ -163,7 +166,6 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <!-- cre.ma / Mobile 상품 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <style>#prdReview .nodata {display: none;}</style>
 <div class="crema-product-reviews" data-product-code="{$product_no}"></div>
-<!-- data-hide-if-zero="1"을 추가시 리뷰개수가 0일 경우 숨김처리 -->
 ```
 
 ```html
@@ -191,15 +193,10 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 마이쇼핑(myshop) > 나의 주문내역 (order) > 주문상품정보 (order_detail_more.html)
 
 ```html
-<!-- cre.ma / 로그인 회원 정보 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<div module="Layout_statelogon" style="display:none;">
-    <i id="crema-login-username" style="display:none;">{$id}</i>
-    <i id="crema-login-name" style="display:none;">{$name}</i>
-</div>
-
-<!-- cre.ma / Mobile 주문 리뷰 작성 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
  crema-new-review-link" data-cafe24-product-link="{$param_postscript}" data-review-source="mobile_my_orders"
+```
 
+```html
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=grafen.co.kr');</script>
 ```
