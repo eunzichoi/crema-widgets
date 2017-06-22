@@ -7,9 +7,11 @@
 상단 > 기본 상단
 
 ```html
+<!--/if_login/-->
 <!-- cre.ma / 로그인 회원 정보 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <i id="crema-login-name" style="display:none;"><!--/user_name/--></i>
 <i id="crema-login-username" style="display:none;"><!--/user_id/--></i>
+<!--/end_if/-->
 ```
 
 ### 메인
