@@ -19,13 +19,13 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 그 정보를 가져오기 위해서 아래의 코드를 삽입합니다.
 {$id}, {$name}은 카페24에서 사용하는 가상태그이며, 실제 보여지는 HTML에서는 로그인한 사용자 ID, 로그인한 사용자 이름으로 치환됩니다.
 우리는 #crema-login-username과 #crema-login-name라는 보이지 않는 요소를 만들어 두고, 여 요소에 해당 태그를 이용해서 Body에 삽입하고 그걸 자바스크립트에서 파싱 & 활용합니다.
-로그인 정보 소스가 들어가는 파일은 딱 정해져있지 않아서, 찾아가는 과정이 필요합니다. `모든 페이지에서 공통적으로 참조하는 헤더 파일`을 찾아야 합니다. 카페24의 기본 디자인에서는 `/layout/basic/main.html`과 `/layout/basic/layout.html`
+로그인 정보 소스가 들어가는 파일은 딱 정해져있지 않아서, 찾아가는 과정이 필요합니다. `모든 페이지에서 공통적으로 참조하는 헤더 파일` 을 찾아야 합니다. 카페24의 기본 디자인에서는 `/layout/basic/main.html` 과 `/layout/basic/layout.html`
 
 ```html
 <!-- cre.ma / 로그인 회원 정보 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<div module="Layout_stateLogon" style="display:none;">
-  <i id="crema-login-username" style="display:none;">{$id}</i>
-  <i id="crema-login-name" style="display:none;">{$name}</i>
+<div module="Layout_stateLogon" style="display:none">
+  <i id="crema-login-username" style="display:none">{$id}</i>
+  <i id="crema-login-name" style="display:none">{$name}</i>
 </div>
 ```
 
@@ -43,7 +43,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=babblring.com');</script>
 ```
 
 ### 리뷰 목록
@@ -60,7 +60,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=locopie.com');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=babblring.com');
 </script>
 ```
 
@@ -81,7 +81,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-popup"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=babblring.com');</script>
 ```
 
 이전 리뷰에 `crema-hide` class 추가
@@ -95,7 +95,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=babblring.com');</script>
 ```
 
 ### 주문 내역
@@ -108,7 +108,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 
 ```html
 <!-- cre.ma / PC 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/reviews/init.js?domain=babblring.com');</script>
 ```
 
 ## Mobile
@@ -134,7 +134,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=babblring.com');</script>
 ```
 
 
@@ -152,7 +152,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
     document.write("<div class='crema-reviews'></div>");
     a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m);
   }
-})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=locopie.com');
+})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=babblring.com');
 </script>
 ```
 
@@ -173,7 +173,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-popup"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=babblring.com');</script>
 ```
 
 ### 내 게시글
@@ -185,7 +185,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 <div class="crema-reviews" data-type="my-reviews"></div>
 
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=babblring.com');</script>
 ```
 
 ### 주문 상세 내역
@@ -198,7 +198,7 @@ PC 버전에서는 기본적으로 위 6개 파일을 수정합니다.
 
 ```html
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=locopie.com');</script>
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=babblring.com');</script>
 ```
 
 구매후기가 "첫번째 주문"과 "두번째 이후 주문" 두 군데 있으니 모두 반영해야합니다.
