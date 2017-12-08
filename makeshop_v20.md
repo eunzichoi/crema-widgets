@@ -9,8 +9,8 @@
 ```html
 <!--/if_login/-->
 <!-- cre.ma / 로그인 회원 정보 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<i id="crema-login-name" style="display:none;"><!--/user_name/--></i>
-<i id="crema-login-username" style="display:none;"><!--/user_id/--></i>
+<i id="crema-login-name" style="display:none"><!--/user_name/--></i>
+<i id="crema-login-username" style="display:none"><!--/user_id/--></i>
 <!--/end_if/-->
 ```
 
@@ -157,32 +157,11 @@
 <!-- cre.ma / 이전 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <div class="crema-hide"></div>
 
-<!--/if_link/-->
-<!-- cre.ma / 상품 리뷰 이동 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<div class="crema-product-reviews-redirect" data-makeshop-product-link="<!--/link/-->"></div>
-<!--/end_if/-->
 
 <!-- cre.ma / 모바일 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=dieteday.com');</script>
 ```
 
-### 포토 리뷰 목록
-
-게시판 디자인 > 포토후기 > 목록
-
-간편리뷰 -> 리뷰설정 -> 추가 리뷰 게시판 설정에서 게시판 추가 후 data-board-id에 게시판 ID 설정
-
-```html
-<!-- cre.ma / 포토 리뷰 목록 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<div class="crema-reviews" data-board-id="1"></div>
-<!-- data-no-auto-scroll="1"을 추가시 자동불러오기를 하지 않음 -->
-
-<!-- cre.ma / 이전 리뷰 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<div class="crema-hide"></div>
-
-<!-- cre.ma / 모바일 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=dieteday.com');</script>
-```
 
 ### 상품 리뷰
 
@@ -226,18 +205,19 @@
 <!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
 <script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=dieteday.com');</script>
 
-<!-- cre.ma / Mobile 주문서 더보기 버튼 시 새로운 주소 호출 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
-<script>
+<!-- cre.ma / Mobile 메이크샵 주문내역 링크 연결 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<script type="text/javascript">
 $(window).load(function() {
   org_ajax = $.ajax;
   $.ajax = function(options) {
     var success = options.success;
     options.success = function(data, textStatus, jqXHR) {
-      if(success)
+      if (success) {
         success(data, textStatus, jqXHR);
         new crema.MakeshopShopBuilder;
         c = new crema.NewReviewLinkWidget;
         c.attach();
+      }
     };
     return org_ajax(options);
   };
@@ -257,7 +237,7 @@ or
 <script>
 setTimeout(function(){
 (function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/mobile/reviews/init.js?domain=dieteday.com');
-},200);
+},250);
 </script>
 ```
 
